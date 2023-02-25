@@ -3,7 +3,7 @@ import os, csv
 import mysql.connector
 
 
-def data_extraction():
+def data_extraction():  # reading cloned data from phonepe,
     path1 = 'C:/Users/Nandhini/pulse/data/'
     path_file = []
     for root, dirs, files in os.walk(path1):
@@ -20,7 +20,7 @@ Statename = pd.read_csv('Statecode.csv')
 Code = pd.read_csv('St_code.csv')
 
 
-def data_extraction():
+def data_extraction():  # preprocessing & creating dataframe and converting to csv file
     path = directory[0]
     data_file = os.listdir(path)
     data = {'State': [], 'Year': [], 'Quater': [], 'Transacion_type': [], 'Transacion_count': [], 'Transacion_amount': []}
@@ -59,7 +59,7 @@ mdf = pd.merge(Code, mdf, on='State_code', how='right')
 mdf.to_csv('aggregated_transaction.csv')
 
 
-def data_extraction1():
+def data_extraction1(): # preprocessing & creating dataframe and converting to csv file
     path = directory[1]
     data_file = os.listdir(path)
     data1 = {'State': [], 'Year': [], 'Quater': [], 'Usersby_device': [], 'Transacion_count': [], 'percentage': []}
@@ -99,7 +99,7 @@ mdf = pd.merge(Code, mdf, on='State_code', how='right')
 mdf.to_csv('aggregated_user.csv')
 
 
-def data_extraction2():
+def data_extraction2(): # preprocessing & creating dataframe and converting to csv file
     path = directory[2]
     data_file = os.listdir(path)
     data2 = {'State': [], 'Year': [], 'Quater': [], 'Usersby_region': [], 'Transacion_count': [],
@@ -139,7 +139,7 @@ mdf = pd.merge(Code, mdf, on='State_code', how='right')
 mdf.to_csv('map_transaction.csv')
 
 
-def data_extraction3():
+def data_extraction3(): # preprocessing & creating dataframe and converting to csv file
     path = directory[3]
     data_file = os.listdir(path)
     data3 = {'State': [], 'Year': [], 'Quater': [], 'district': [], 'registeredUsers': [], 'appOpens': []}
@@ -178,7 +178,7 @@ mdf = pd.merge(Code, mdf, on='State_code', how='right')
 mdf.to_csv('map_user.csv')
 
 
-def data_extraction4():
+def data_extraction4(): # preprocessing & creating dataframe and converting to csv file
     path = directory[4]
     data_file = os.listdir(path)
     data4 = {'State': [], 'Year': [], 'Quater': [], 'entityName_pincodes': [], 'Transacion_count': [], 'Transacion_amount': []}
@@ -217,7 +217,7 @@ mdf = pd.merge(Code, mdf, on='State_code', how='right')
 mdf.to_csv('top_transaction.csv')
 
 
-def data_extraction5():
+def data_extraction5(): # preprocessing & creating dataframe and converting to csv file
     path = directory[5]
     data_file = os.listdir(path)
     data5 = {'State': [], 'Year': [], 'Quater': [], 'district_pincodes': [], 'registeredUsers': []}
@@ -254,7 +254,7 @@ mdf = pd.merge(Code, mdf, on='State_code', how='right')
 mdf.to_csv('top_user.csv')
 
 
-def data_preprocessing():
+def data_preprocessing():   # reading csv file and importing to MySQL database.
     dict_list = list()
 
     with open('aggregated_transaction.csv', 'r') as csvfile:
@@ -288,7 +288,7 @@ def data_preprocessing():
 data_preprocessing()
 
 
-def data_preprocessing1():
+def data_preprocessing1():  # reading csv file and importing to MySQL database.
     dict_list = list()
 
     with open('aggregated_user.csv', 'r') as csvfile:
@@ -323,7 +323,7 @@ def data_preprocessing1():
 data_preprocessing1()
 
 
-def data_preprocessing2():
+def data_preprocessing2():  # reading csv file and importing to MySQL database.
     dict_list = list()
 
     with open('map_transaction.csv', 'r') as csvfile:
@@ -357,7 +357,7 @@ def data_preprocessing2():
 data_preprocessing2()
 
 
-def data_preprocessing3():
+def data_preprocessing3():  # reading csv file and importing to MySQL database.
     dict_list = list()
 
     with open('map_user.csv', 'r') as csvfile:
@@ -391,7 +391,7 @@ def data_preprocessing3():
 data_preprocessing3()
 
 
-def data_preprocessing4():
+def data_preprocessing4():  # reading csv file and importing to MySQL database.
 
     dict_list = list()
 
@@ -427,7 +427,7 @@ def data_preprocessing4():
 data_preprocessing4()
 
 
-def data_preprocessing5():
+def data_preprocessing5():  # reading csv file and importing to MySQL database.
     dict_list = list()
 
     with open('top_user.csv', 'r') as csvfile:
