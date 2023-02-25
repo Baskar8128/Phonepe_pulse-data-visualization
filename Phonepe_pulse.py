@@ -3,7 +3,7 @@ import os, csv
 import mysql.connector
 
 
-def data_extraction():  # reading cloned data from phonepe,
+def data_extraction():  # reading cloned data from phonepe.
     path1 = 'C:/Users/Nandhini/pulse/data/'
     path_file = []
     for root, dirs, files in os.walk(path1):
