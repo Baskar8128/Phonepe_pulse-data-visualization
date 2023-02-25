@@ -32,6 +32,6 @@ Workflow:
       
 6.data geojson:
       in this function we read a geojson file to plot the data on geo map. we groupby the data with the year and quarter column to visualize the data as year and quarter wise.
-      
+
 7. data visualization:
       in this function we using plotly.express library to visualize the data as state wise. the choropleth map has been used to visualize the data with state and transaction count and transaction amount details. in streamlit interface we can see the total transaction count and transaction amount based on data selection by user.
