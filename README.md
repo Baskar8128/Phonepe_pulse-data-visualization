@@ -28,7 +28,7 @@ Workflow:
       here we fetching the tables from MySQL phonepe pulse database using mysql connector library and converting to pandas dataframe.
       
 5.data_selection:
-      Here we using the streamlit library to create user friendly interface with multiple dropdown options. the user has to selecth the data file , year, quarter and data type. 
+      Here we using the streamlit library to create user friendly interface with multiple dropdown options. the user has to select the data file , year, quarter and data type. 
       
 6.data geojson:
       in this function we read a geojson file to plot the data on geo map. we groupby the data with the year and quarter column to visualize the data as year and quarter wise.
